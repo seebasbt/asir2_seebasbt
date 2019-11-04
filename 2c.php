@@ -1,32 +1,65 @@
+<style>
+
+	div{
+
+		margin:20px;
+
+	}
+
+</style>
+
 <?php
-function calcula ($a,$b) {
 
-echo '<div>';
-echo 'Suma de '.$a.' + '.$b.' = ';
-echo $a+$b;
-echo '</div>';
-echo '<div>';
-echo 'Resta de '.$a.' - '.$b.' = ';
-echo $a-$b;
-echo '</div>';
-echo '<div>';
-echo 'Multiplicación de '.$a.' x '.$b.' = ';
-echo $a*$b;
-echo '</div>';
-echo '<div>';
-echo 'División de '.$a.' / '.$b.' = ';
-echo $a/$b;
-echo '</div>';
+function calcula($a,$b){
+
+	$r=null;
+
+	$r=$r.'<div>';
+
+		$r=$r.'SUMA: '.$a.' + '.$b.' = ';
+
+		$r=$r.($a+$b);
+
+	$r=$r.'</div>';
+
+
+
+	$r=$r.'<div>';
+
+		$r=$r.'PRODUCTO: '.$a.' * '.$b.' = ';
+
+		$r=$r.$a*$b;
+
+	$r=$r.'</div>';
+
+	$r=$r.'<div>';
+
+		$r=$r.'COCIENTE: '.$a.' / '.$b.' = ';
+
+		$r=$r.($a/$b);
+
+	$r=$r.'</div>';
+
+	$r=$r.'<div>';
+
+		$r=$r.'RESTA: '.$a.' - '.$b.' = ';
+
+		$r=$r.($a-$b);
+
+	$r=$r.'</div>';
+
+	$r=$r.'<div>...</div>';
+
+	return $r;
+
 }
-calcula (70,58);
-calcula (78,45);
-calcula (14,63);
-calcula (62,85);
-calcula (25,37);
-calcula (17,30);
 
+$s=calcula(25,0);
 
+echo $s;
 
+$s=calcula(60,55);
 
+echo $s;
 
 ?>
